@@ -36,4 +36,4 @@ if __name__ == "__main__":
             print(f"Data tratada: {data_tratada}")
         else:
             print("Formato de data inválido.")
-        print("oi")
+        print("oi") 

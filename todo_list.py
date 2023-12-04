@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from utils import tratar_entrada_data
+from utils import tratar_entrada_data  
 
 
 class Tarefa:
