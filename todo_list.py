@@ -180,6 +180,9 @@ class TodoList:
 
     def menu(self):
         while True:
+        
+            print("\nBem-vindo ao  Gestor de Compromissos!\nSelecione a opção desejada e aguarde a atualização dos dados dos seus compromissos do dia")
+
             print(
                 "0 - Sair\n1 - Mostrar\n2 - Adicionar\n3 - Remover\n4 - Filtrar por data\n5 - Buscar"
             )
