@@ -31,38 +31,29 @@ class TodoList:
             tarefa (Tarefa): The task to be added.
         """
 
-        # Get the current date and time
         date_time_now = datetime.now() # entrar na classe pra pegar uma informação específica 
 
-        # Set the task's date and hour attributes
         tarefa.date = date_time_now.strftime("%d/%m/%Y")
         tarefa.hour = date_time_now.strftime("%H:%M:%S")
 
-        # If the task list is empty, set the first and last tasks to the newly added task
          
         if self.primeiro is None:
             self.primeiro = tarefa
             self.ultimo = tarefa
 
-        # If the task list is not empty, set the next task of the last task to the newly added task
         if self.ultimo is not None:
             self.ultimo.proximo = tarefa
 
-        # Set the previous task of the newly added task to the last task
         tarefa.anterior = self.ultimo
 
-        # If the newly added task is its own previous task, set the previous task to None
         if tarefa.anterior == tarefa:
             tarefa.anterior = None    # apontar as duas pontas para none para não ficar circular
 
-        # If the newly added task is its own next task, set the next task to None
         if tarefa.proximo == tarefa:
             tarefa.proximo = None
 
-        # Update the last task to the newly added task
         self.ultimo = tarefa
 
-        # Show the updated task list
         self.mostrar() # mostrar a lista atualizada 
 
     def mostrar(self):
